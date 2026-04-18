@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tahir Tech</title>
+  <title>builtdigital</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -189,10 +189,6 @@
       width: 100%; height: 100%;
       pointer-events: none;
       z-index: 1;
-      display: none;
-    }
-    @media (min-width: 768px) {
-      #geo-canvas { display: block; }
     }
 
     .hero-stats {
@@ -523,14 +519,38 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #contact-dotted {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    #contact-dotted canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .contact-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
     }
 
     .contact::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(59,124,244,0.07) 0%, transparent 70%);
+      background: radial-gradient(ellipse 40% 40% at 50% 50%, rgba(59,124,244,0.08) 0%, transparent 70%);
       pointer-events: none;
+      z-index: 1;
     }
 
     .contact h2 {
@@ -543,7 +563,7 @@
       margin: 16px auto 16px;
     }
 
-    .contact > p {
+    .contact p:not(.section-label-light) {
       font-size: 1rem;
       font-weight: 300;
       color: var(--gray-60);
@@ -668,8 +688,8 @@
   <!-- NAV -->
   <nav id="nav">
     <a href="/" class="nav-logo">
-      <img src="/Brand_assets/Brand_Logo_White.jpg" alt="Tahir Tech">
-      <span class="nav-logo-text">Tahir Tech</span>
+      <img src="/Brand_assets/Brand_Logo_White.jpg" alt="builtdigital">
+      <span class="nav-logo-text">builtdigital</span>
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
@@ -682,11 +702,11 @@
   <section class="hero">
     <canvas id="geo-canvas"></canvas>
     <div class="hero-content">
-      <p class="hero-label">Modern IT Studio</p>
-      <h1 class="hero-heading">A modern IT studio that turns complexity into clarity.</h1>
-      <p class="hero-sub">We help businesses grow with precision-built websites, reliable hosting, and expert tech support — from first idea to live in weeks.</p>
+      <p class="hero-label">Technology Group</p>
+      <h1 class="hero-heading">A technology group that turns complexity into clarity.</h1>
+      <p class="hero-sub">We help businesses grow with precision-built websites, reliable hosting, and expert tech support. From first idea to live in weeks.</p>
       <div class="hero-actions">
-        <a href="mailto:abdtahir132@gmail.com" class="btn-primary">
+        <a href="#contact" class="btn-primary">
           Start a project
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -741,8 +761,8 @@
       <h2>We design and build digital products that combine craft with reliability.</h2>
     </div>
     <div class="intro-right reveal">
-      <p>At Tahir Tech, we believe technology should be a lever for growth — not a source of friction. <strong>From idea to launch in weeks, not months.</strong></p>
-      <p>We work closely with businesses of all sizes to deliver websites, cloud infrastructure, and ongoing IT support that simply works — reliably, securely, and at scale.</p>
+      <p>At builtdigital, we believe technology should be a lever for growth, not a source of friction. <strong>From idea to launch in weeks, not months.</strong></p>
+      <p>We work closely with businesses of all sizes to deliver websites, cloud infrastructure, and ongoing IT support that simply works. Reliably, securely, and at scale.</p>
       <a href="#services" class="link-arrow">
         Explore our services
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -784,7 +804,7 @@
           <circle cx="20" cy="20" r="1.5" fill="currentColor"/>
         </svg>
         <h3>IT Strategy</h3>
-        <p>From digital roadmaps to security audits, we align your technology stack with your long-term business objectives — clearly and pragmatically.</p>
+        <p>From digital roadmaps to security audits, we align your technology stack with your long-term business objectives. Clearly and pragmatically.</p>
       </div>
     </div>
   </section>
@@ -792,25 +812,28 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <p class="section-label-light reveal">Get in Touch</p>
-    <h2 class="reveal">We're ready<br>to collaborate.</h2>
-    <p class="reveal">Tell us about your project — we'll get back to you within one business day.</p>
-    <a href="mailto:abdtahir132@gmail.com" class="contact-email reveal">
-      abdtahir132@gmail.com
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <br>
-    <a href="mailto:abdtahir132@gmail.com" class="btn-primary reveal" style="display:inline-flex;margin-top:8px;">
-      Start a Project
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
+    <div id="contact-dotted"></div>
+    <div class="contact-inner">
+      <p class="section-label-light reveal">Get in Touch</p>
+      <h2 class="reveal">We're ready<br>to collaborate.</h2>
+      <p class="reveal">Tell us about your project. We'll get back to you within one business day.</p>
+      <a href="mailto:abdtahir132@gmail.com" class="contact-email reveal">
+        abdtahir132@gmail.com
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <br>
+      <a href="mailto:abdtahir132@gmail.com" class="btn-primary reveal" style="display:inline-flex;margin-top:8px;">
+        Start a Project
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="/Brand_assets/Brand_Logo_White.jpg" alt="Tahir Tech">
+        <img src="/Brand_assets/Brand_Logo_White.jpg" alt="builtdigital">
         <p>Modern IT solutions built with precision. We help businesses grow with websites, hosting, and reliable tech support.</p>
       </div>
       <div class="footer-links">
@@ -833,409 +856,294 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Tahir Tech. All rights reserved.</p>
+      <p>&copy; 2026 builtdigital. All rights reserved.</p>
       <p>Professional. Modern. Reliable.</p>
     </div>
   </footer>
 
   <script>
-  // ─── GEOMETRIC BLUR MESH (WebGL) ───
+  // ─── HERO: INTERACTIVE NETWORK BACKGROUND ───
   (function () {
-    var fragmentShader = `
-#ifdef GL_ES
-precision highp float;
-#endif
-
-uniform vec2 u_mouse;
-uniform vec2 u_resolution;
-uniform float u_pixelRatio;
-uniform float u_time;
-uniform int u_shape;
-
-#define PI 3.1415926535897932384626433832795
-#define TWO_PI 6.2831853071795864769252867665590
-
-mat3 rotateX(float angle) {
-    float s = sin(angle); float c = cos(angle);
-    return mat3(1.0,0.0,0.0, 0.0,c,-s, 0.0,s,c);
-}
-mat3 rotateY(float angle) {
-    float s = sin(angle); float c = cos(angle);
-    return mat3(c,0.0,s, 0.0,1.0,0.0, -s,0.0,c);
-}
-mat3 rotateZ(float angle) {
-    float s = sin(angle); float c = cos(angle);
-    return mat3(c,-s,0.0, s,c,0.0, 0.0,0.0,1.0);
-}
-
-vec2 coord(in vec2 p) {
-    p = p / u_resolution.xy;
-    if (u_resolution.x > u_resolution.y) {
-        p.x *= u_resolution.x / u_resolution.y;
-        p.x += (u_resolution.y - u_resolution.x) / u_resolution.y / 2.0;
-    } else {
-        p.y *= u_resolution.y / u_resolution.x;
-        p.y += (u_resolution.x - u_resolution.y) / u_resolution.x / 2.0;
-    }
-    p -= 0.5;
-    return p;
-}
-
-vec2 project(vec3 p) {
-    float perspective = 2.0 / (2.0 - p.z);
-    return p.xy * perspective;
-}
-
-float distToSegment(vec2 p, vec2 a, vec2 b) {
-    vec2 pa = p - a; vec2 ba = b - a;
-    float h = clamp(dot(pa, ba) / dot(ba, ba), 0.0, 1.0);
-    return length(pa - ba * h);
-}
-
-float drawLine(vec2 p, vec2 a, vec2 b, float thickness, float blur) {
-    float d = distToSegment(p, a, b);
-    return smoothstep(thickness + blur, thickness - blur, d);
-}
-
-void getCubeVertices(out vec3 v[8]) {
-    float s = 0.7;
-    v[0]=vec3(-s,-s,-s); v[1]=vec3(s,-s,-s); v[2]=vec3(s,s,-s); v[3]=vec3(-s,s,-s);
-    v[4]=vec3(-s,-s,s);  v[5]=vec3(s,-s,s);  v[6]=vec3(s,s,s);  v[7]=vec3(-s,s,s);
-}
-void getTetrahedronVertices(out vec3 v[4]) {
-    float a = 1.0/sqrt(3.0);
-    v[0]=vec3(a,a,a); v[1]=vec3(a,-a,-a); v[2]=vec3(-a,a,-a); v[3]=vec3(-a,-a,a);
-}
-void getOctahedronVertices(out vec3 v[6]) {
-    v[0]=vec3(1,0,0); v[1]=vec3(-1,0,0); v[2]=vec3(0,1,0);
-    v[3]=vec3(0,-1,0); v[4]=vec3(0,0,1); v[5]=vec3(0,0,-1);
-}
-void getIcosahedronVertices(out vec3 v[12]) {
-    float t = (1.0+sqrt(5.0))/2.0;
-    float s = 1.0/sqrt(1.0+t*t);
-    v[0]=vec3(-s,t*s,0); v[1]=vec3(s,t*s,0); v[2]=vec3(-s,-t*s,0); v[3]=vec3(s,-t*s,0);
-    v[4]=vec3(0,-s,t*s); v[5]=vec3(0,s,t*s); v[6]=vec3(0,-s,-t*s); v[7]=vec3(0,s,-t*s);
-    v[8]=vec3(t*s,0,-s); v[9]=vec3(t*s,0,s); v[10]=vec3(-t*s,0,-s); v[11]=vec3(-t*s,0,s);
-}
-
-float drawWireframe(vec2 p, int shape, mat3 rotation, float scale, float thickness, float blur) {
-    float result = 0.0;
-
-    if (shape == 0) {
-        vec3 v[8]; getCubeVertices(v);
-        for (int i=0;i<8;i++) v[i]=rotation*(v[i]*scale);
-        result+=drawLine(p,project(v[0]),project(v[1]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[2]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[3]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[0]),thickness,blur);
-        result+=drawLine(p,project(v[4]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[5]),project(v[6]),thickness,blur);
-        result+=drawLine(p,project(v[6]),project(v[7]),thickness,blur);
-        result+=drawLine(p,project(v[7]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[6]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[7]),thickness,blur);
-
-    } else if (shape == 1) {
-        vec3 v[4]; getTetrahedronVertices(v);
-        for (int i=0;i<4;i++) v[i]=rotation*(v[i]*scale);
-        result+=drawLine(p,project(v[0]),project(v[1]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[2]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[3]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[2]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[3]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[3]),thickness,blur);
-
-    } else if (shape == 2) {
-        vec3 v[6]; getOctahedronVertices(v);
-        for (int i=0;i<6;i++) v[i]=rotation*(v[i]*scale);
-        result+=drawLine(p,project(v[2]),project(v[0]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[1]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[0]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[1]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[4]),project(v[1]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[5]),project(v[0]),thickness,blur);
-
-    } else if (shape == 3) {
-        vec3 v[12]; getIcosahedronVertices(v);
-        for (int i=0;i<12;i++) v[i]=rotation*(v[i]*scale);
-        result+=drawLine(p,project(v[0]),project(v[1]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[7]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[10]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[11]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[7]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[8]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[9]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[3]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[6]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[10]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[11]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[6]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[8]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[9]),thickness,blur);
-        result+=drawLine(p,project(v[4]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[4]),project(v[11]),thickness,blur);
-        result+=drawLine(p,project(v[5]),project(v[11]),thickness,blur);
-        result+=drawLine(p,project(v[6]),project(v[7]),thickness,blur);
-        result+=drawLine(p,project(v[6]),project(v[8]),thickness,blur);
-        result+=drawLine(p,project(v[6]),project(v[10]),thickness,blur);
-        result+=drawLine(p,project(v[7]),project(v[10]),thickness,blur);
-        result+=drawLine(p,project(v[8]),project(v[9]),thickness,blur);
-        result+=drawLine(p,project(v[9]),project(v[11]),thickness,blur);
-        result+=drawLine(p,project(v[10]),project(v[11]),thickness,blur);
-
-    } else if (shape == 4) {
-        vec3 v[5];
-        float s=0.7;
-        v[0]=vec3(-s,0,-s); v[1]=vec3(s,0,-s); v[2]=vec3(s,0,s); v[3]=vec3(-s,0,s); v[4]=vec3(0,1,0);
-        for (int i=0;i<5;i++) v[i]=rotation*(v[i]*scale);
-        result+=drawLine(p,project(v[0]),project(v[1]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[2]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[3]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[0]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[4]),thickness,blur);
-
-    } else if (shape == 5) {
-        vec3 v[6];
-        float s=0.6;
-        v[0]=vec3(-s,0,-s); v[1]=vec3(s,0,-s); v[2]=vec3(s,0,s); v[3]=vec3(-s,0,s);
-        v[4]=vec3(0,1,0); v[5]=vec3(0,-1,0);
-        for (int i=0;i<6;i++) v[i]=rotation*(v[i]*scale);
-        result+=drawLine(p,project(v[0]),project(v[1]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[2]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[3]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[0]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[5]),thickness,blur);
-
-    } else if (shape == 6) {
-        vec3 v[12];
-        float step = TWO_PI/6.0;
-        v[0]=vec3(cos(0.0*step),-1.0,sin(0.0*step)); v[1]=vec3(cos(1.0*step),-1.0,sin(1.0*step));
-        v[2]=vec3(cos(2.0*step),-1.0,sin(2.0*step)); v[3]=vec3(cos(3.0*step),-1.0,sin(3.0*step));
-        v[4]=vec3(cos(4.0*step),-1.0,sin(4.0*step)); v[5]=vec3(cos(5.0*step),-1.0,sin(5.0*step));
-        v[6]=vec3(cos(0.0*step),1.0,sin(0.0*step));  v[7]=vec3(cos(1.0*step),1.0,sin(1.0*step));
-        v[8]=vec3(cos(2.0*step),1.0,sin(2.0*step));  v[9]=vec3(cos(3.0*step),1.0,sin(3.0*step));
-        v[10]=vec3(cos(4.0*step),1.0,sin(4.0*step)); v[11]=vec3(cos(5.0*step),1.0,sin(5.0*step));
-        for (int i=0;i<12;i++) v[i]=rotation*(v[i]*scale);
-        result+=drawLine(p,project(v[0]),project(v[1]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[2]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[3]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[4]),thickness,blur);
-        result+=drawLine(p,project(v[4]),project(v[5]),thickness,blur);
-        result+=drawLine(p,project(v[5]),project(v[0]),thickness,blur);
-        result+=drawLine(p,project(v[6]),project(v[7]),thickness,blur);
-        result+=drawLine(p,project(v[7]),project(v[8]),thickness,blur);
-        result+=drawLine(p,project(v[8]),project(v[9]),thickness,blur);
-        result+=drawLine(p,project(v[9]),project(v[10]),thickness,blur);
-        result+=drawLine(p,project(v[10]),project(v[11]),thickness,blur);
-        result+=drawLine(p,project(v[11]),project(v[6]),thickness,blur);
-        result+=drawLine(p,project(v[0]),project(v[6]),thickness,blur);
-        result+=drawLine(p,project(v[1]),project(v[7]),thickness,blur);
-        result+=drawLine(p,project(v[2]),project(v[8]),thickness,blur);
-        result+=drawLine(p,project(v[3]),project(v[9]),thickness,blur);
-        result+=drawLine(p,project(v[4]),project(v[10]),thickness,blur);
-        result+=drawLine(p,project(v[5]),project(v[11]),thickness,blur);
-
-    } else {
-        float t = u_time * 0.5;
-        float morph = sin(t) * 0.5 + 0.5;
-        vec3 cube[8]; getCubeVertices(cube);
-        vec3 octa[6]; getOctahedronVertices(octa);
-        vec3 v[8];
-        for (int i=0;i<8;i++) {
-            if (i<6) { v[i]=mix(cube[i],octa[i]*1.5,morph); }
-            else { v[i]=cube[i]*(1.0-morph*0.3); }
-            v[i]=rotation*(v[i]*scale);
-        }
-        float alpha=1.0-morph*0.5;
-        result+=drawLine(p,project(v[0]),project(v[1]),thickness,blur)*alpha;
-        result+=drawLine(p,project(v[1]),project(v[2]),thickness,blur)*alpha;
-        result+=drawLine(p,project(v[2]),project(v[3]),thickness,blur)*alpha;
-        result+=drawLine(p,project(v[3]),project(v[0]),thickness,blur)*alpha;
-        result+=drawLine(p,project(v[4]),project(v[5]),thickness,blur)*alpha;
-        result+=drawLine(p,project(v[5]),project(v[6]),thickness,blur)*alpha;
-        result+=drawLine(p,project(v[6]),project(v[7]),thickness,blur)*alpha;
-        result+=drawLine(p,project(v[7]),project(v[4]),thickness,blur)*alpha;
-        result+=drawLine(p,project(v[0]),project(v[6]),thickness,blur)*morph;
-        result+=drawLine(p,project(v[1]),project(v[7]),thickness,blur)*morph;
-        result+=drawLine(p,project(v[2]),project(v[4]),thickness,blur)*morph;
-        result+=drawLine(p,project(v[3]),project(v[5]),thickness,blur)*morph;
-    }
-
-    return clamp(result, 0.0, 1.0);
-}
-
-void main() {
-    vec2 st = coord(gl_FragCoord.xy);
-    vec2 mouse = coord(u_mouse * u_pixelRatio) * vec2(1., -1.);
-
-    float mouseDistance = length(st - mouse);
-    float mouseInfluence = 1.0 - smoothstep(0.0, 0.5, mouseDistance);
-
-    float time = u_time * 0.2;
-    mat3 rotation = rotateY(time + (mouse.x - 0.5) * mouseInfluence * 1.0) *
-                    rotateX(time * 0.7 + (mouse.y - 0.5) * mouseInfluence * 1.0) *
-                    rotateZ(time * 0.1);
-
-    float scale = 0.27;
-    float blur = mix(0.0001, 0.05, mouseInfluence);
-    float thickness = mix(0.002, 0.003, mouseInfluence);
-
-    // Shift shape to the left (negative x in normalized space)
-    vec2 shapeCoord = st - vec2(0.22, 0.0);
-    float shape = drawWireframe(shapeCoord, u_shape, rotation, scale, thickness, blur);
-
-    vec3 color = vec3(0.9, 0.95, 1.0);
-    float dimming = 1.0 - mouseInfluence * 0.3;
-    color *= shape * dimming;
-
-    float vignette = 1.0 - length(st) * 0.2;
-    color *= vignette;
-    color = pow(color, vec3(0.9));
-
-    // Use luminance as alpha so the black background is transparent
-    float a = dot(color, vec3(0.299, 0.587, 0.114));
-    gl_FragColor = vec4(color, a);
-}
-`;
-
-    var vertexShader = `
-attribute vec3 a_position;
-attribute vec2 a_uv;
-varying vec2 v_texcoord;
-void main() {
-    gl_Position = vec4(a_position, 1.0);
-    v_texcoord = a_uv;
-}
-`;
-
     var canvas = document.getElementById('geo-canvas');
-    var hero = canvas.parentElement;
+    var ctx    = canvas.getContext('2d');
+    var hero   = canvas.parentElement;
 
-    var gl = canvas.getContext('webgl', {
-      antialias: true, alpha: true, premultipliedAlpha: false, preserveDrawingBuffer: false
-    });
-    if (!gl) return;
+    var W, H, dpr;
+    var particles = [], packets = [], rings = [], stars = [];
+    var mouse = { x: -9999, y: -9999 };
+    var lastPacket = 0, lastRing = 0, lastStar = 0;
 
-    gl.enable(gl.BLEND);
-    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
-    gl.clearColor(0, 0, 0, 0);
+    var B  = '59,124,244';
+    var LT = '180,215,255';
+    var WH = '220,240,255';
 
-    function createShader(type, src) {
-      var s = gl.createShader(type);
-      gl.shaderSource(s, src); gl.compileShader(s);
-      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
-        console.error('Shader error:', gl.getShaderInfoLog(s)); return null;
+    // ── Canvas setup ──────────────────────────────────
+    function resize() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = hero.clientWidth; H = hero.clientHeight;
+      canvas.width  = W * dpr; canvas.height = H * dpr;
+      canvas.style.width  = W + 'px'; canvas.style.height = H + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    // ── Particle ──────────────────────────────────────
+    function Particle(isHub) {
+      this.x  = Math.random() * W; this.y = Math.random() * H;
+      this.vx = (Math.random() - 0.5) * 0.38;
+      this.vy = (Math.random() - 0.5) * 0.38;
+      this.isHub = !!isHub;
+      this.r    = isHub ? Math.random() * 2 + 3.5 : Math.random() * 1.2 + 0.9;
+      this.base = isHub ? Math.random() * 0.2 + 0.8 : Math.random() * 0.3 + 0.45;
+      this.op = this.base;
+      this.ph = Math.random() * Math.PI * 2;
+      this.phs = Math.random() * 0.014 + 0.008;
+    }
+
+    Particle.prototype.update = function () {
+      var dx = this.x - mouse.x, dy = this.y - mouse.y;
+      var d2 = dx * dx + dy * dy, R = 210;
+      if (d2 < R * R && d2 > 0.01) {
+        var d = Math.sqrt(d2);
+        var f = ((R - d) / R) * ((R - d) / R) * 1.6;
+        this.vx += (dx / d) * f * (this.isHub ? 0.1 : 0.5);
+        this.vy += (dy / d) * f * (this.isHub ? 0.1 : 0.5);
       }
-      return s;
-    }
-
-    var vShader = createShader(gl.VERTEX_SHADER, vertexShader);
-    var fShader = createShader(gl.FRAGMENT_SHADER, fragmentShader);
-    if (!vShader || !fShader) return;
-
-    var program = gl.createProgram();
-    gl.attachShader(program, vShader); gl.attachShader(program, fShader);
-    gl.linkProgram(program);
-    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-      console.error('Link error:', gl.getProgramInfoLog(program)); return;
-    }
-    gl.useProgram(program);
-
-    var uniforms = {
-      u_mouse: gl.getUniformLocation(program, 'u_mouse'),
-      u_resolution: gl.getUniformLocation(program, 'u_resolution'),
-      u_pixelRatio: gl.getUniformLocation(program, 'u_pixelRatio'),
-      u_time: gl.getUniformLocation(program, 'u_time'),
-      u_shape: gl.getUniformLocation(program, 'u_shape')
+      this.vx *= 0.97; this.vy *= 0.97;
+      var spd = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+      var max = this.isHub ? 0.55 : 1.4;
+      if (spd > max) { this.vx = (this.vx / spd) * max; this.vy = (this.vy / spd) * max; }
+      this.x += this.vx; this.y += this.vy;
+      var pad = 50;
+      if (this.x < -pad) this.x = W + pad; if (this.x > W + pad) this.x = -pad;
+      if (this.y < -pad) this.y = H + pad; if (this.y > H + pad) this.y = -pad;
+      this.ph += this.phs;
+      this.op = this.base * (0.72 + 0.28 * Math.sin(this.ph));
     };
 
-    var verts = new Float32Array([-1,-1,0, 1,-1,0, -1,1,0, 1,1,0]);
-    var uvs   = new Float32Array([0,0, 1,0, 0,1, 1,1]);
+    Particle.prototype.draw = function () {
+      // Hub nodes get 3 concentric bloom rings
+      if (this.isHub) {
+        for (var ri = 3; ri >= 1; ri--) {
+          var rr = this.r * (5 + ri * 4);
+          ctx.beginPath(); ctx.arc(this.x, this.y, rr, 0, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(' + B + ',' + (this.op * 0.07 / ri) + ')';
+          ctx.lineWidth = 0.6; ctx.stroke();
+        }
+      }
+      var gR = this.r * (this.isHub ? 9 : 5);
+      var g  = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, gR);
+      g.addColorStop(0,   'rgba(' + B + ',' + (this.op * 0.75) + ')');
+      g.addColorStop(0.5, 'rgba(' + B + ',' + (this.op * 0.25) + ')');
+      g.addColorStop(1,   'rgba(' + B + ',0)');
+      ctx.beginPath(); ctx.arc(this.x, this.y, gR, 0, Math.PI * 2);
+      ctx.fillStyle = g; ctx.fill();
+      ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + (this.isHub ? LT : B) + ',' + this.op + ')';
+      ctx.fill();
+    };
 
-    var posBuf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, posBuf);
-    gl.bufferData(gl.ARRAY_BUFFER, verts, gl.STATIC_DRAW);
-    var posLoc = gl.getAttribLocation(program, 'a_position');
-    gl.enableVertexAttribArray(posLoc);
-    gl.vertexAttribPointer(posLoc, 3, gl.FLOAT, false, 0, 0);
-
-    var uvBuf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, uvBuf);
-    gl.bufferData(gl.ARRAY_BUFFER, uvs, gl.STATIC_DRAW);
-    var uvLoc = gl.getAttribLocation(program, 'a_uv');
-    gl.enableVertexAttribArray(uvLoc);
-    gl.vertexAttribPointer(uvLoc, 2, gl.FLOAT, false, 0, 0);
-
-    var mouse = { x: 0, y: 0 };
-    var mouseDamp = { x: 0, y: 0 };
-    var currentShape = 0;
-    var startTime = Date.now();
-    var lastTime = performance.now();
-
-    function resize() {
-      var dpr = Math.min(window.devicePixelRatio || 1, 2);
-      var w = hero.clientWidth, h = hero.clientHeight;
-      canvas.width = w * dpr; canvas.height = h * dpr;
-      canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
-      gl.viewport(0, 0, canvas.width, canvas.height);
+    // ── Data Packet (with fading trail) ───────────────
+    function Packet(a, b) {
+      this.a = a; this.b = b; this.t = 0;
+      this.spd = Math.random() * 0.007 + 0.007;
+      this.alive = true; this.history = [];
     }
 
-    window.addEventListener('mousemove', function(e) {
+    Packet.prototype.update = function () {
+      this.history.push(this.t);
+      if (this.history.length > 10) this.history.shift();
+      this.t += this.spd;
+      if (this.t >= 1) this.alive = false;
+    };
+
+    Packet.prototype.draw = function () {
+      var ax = this.a.x, ay = this.a.y, bx = this.b.x, by = this.b.y;
+      for (var i = 0; i < this.history.length; i++) {
+        var ht = this.history[i];
+        var hx = ax + (bx - ax) * ht, hy = ay + (by - ay) * ht;
+        var ha = (i / this.history.length) * 0.45;
+        ctx.beginPath(); ctx.arc(hx, hy, 2, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(' + B + ',' + ha + ')'; ctx.fill();
+      }
+      var x = ax + (bx - ax) * this.t, y = ay + (by - ay) * this.t;
+      var g = ctx.createRadialGradient(x, y, 0, x, y, 10);
+      g.addColorStop(0,   'rgba(255,255,255,0.95)');
+      g.addColorStop(0.4, 'rgba(' + B + ',0.6)');
+      g.addColorStop(1,   'rgba(' + B + ',0)');
+      ctx.beginPath(); ctx.arc(x, y, 10, 0, Math.PI * 2);
+      ctx.fillStyle = g; ctx.fill();
+      ctx.beginPath(); ctx.arc(x, y, 2, 0, Math.PI * 2);
+      ctx.fillStyle = '#fff'; ctx.fill();
+    };
+
+    // ── Ripple Ring ───────────────────────────────────
+    function Ring(x, y, big) {
+      this.x = x; this.y = y; this.r = 0;
+      this.max = big ? (120 + Math.random() * 80) : (60 + Math.random() * 50);
+      this.alive = true;
+    }
+
+    Ring.prototype.update = function () { this.r += 1.4; if (this.r >= this.max) this.alive = false; };
+
+    Ring.prototype.draw = function () {
+      var a = (1 - this.r / this.max) * 0.45;
+      ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(' + B + ',' + a + ')';
+      ctx.lineWidth = 0.9; ctx.stroke();
+    };
+
+    // ── Shooting Star ─────────────────────────────────
+    function Star() {
+      var edge = Math.floor(Math.random() * 4);
+      if (edge === 0) { this.x = Math.random() * W; this.y = -5; }
+      else if (edge === 1) { this.x = W + 5; this.y = Math.random() * H * 0.6; }
+      else if (edge === 2) { this.x = Math.random() * W; this.y = H + 5; }
+      else { this.x = -5; this.y = Math.random() * H; }
+      var angle = Math.atan2(H * 0.4 - this.y, W * 0.5 - this.x) + (Math.random() - 0.5) * 0.6;
+      var spd = 9 + Math.random() * 7;
+      this.vx = Math.cos(angle) * spd; this.vy = Math.sin(angle) * spd;
+      this.life = 1; this.decay = 0.012 + Math.random() * 0.01;
+      this.alive = true; this.trail = [];
+    }
+
+    Star.prototype.update = function () {
+      this.trail.push({ x: this.x, y: this.y });
+      if (this.trail.length > 22) this.trail.shift();
+      this.x += this.vx; this.y += this.vy;
+      this.life -= this.decay;
+      if (this.life <= 0 || this.x < -50 || this.x > W + 50 || this.y < -50 || this.y > H + 50) this.alive = false;
+    };
+
+    Star.prototype.draw = function () {
+      var n = this.trail.length;
+      for (var i = 1; i < n; i++) {
+        var a = (i / n) * this.life * 0.75;
+        ctx.beginPath();
+        ctx.moveTo(this.trail[i - 1].x, this.trail[i - 1].y);
+        ctx.lineTo(this.trail[i].x, this.trail[i].y);
+        ctx.strokeStyle = 'rgba(' + WH + ',' + a + ')';
+        ctx.lineWidth = (i / n) * 2.2; ctx.stroke();
+      }
+      var hg = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, 7);
+      hg.addColorStop(0, 'rgba(255,255,255,' + this.life * 0.95 + ')');
+      hg.addColorStop(1, 'rgba(' + B + ',0)');
+      ctx.beginPath(); ctx.arc(this.x, this.y, 7, 0, Math.PI * 2);
+      ctx.fillStyle = hg; ctx.fill();
+    };
+
+    // ── Init ──────────────────────────────────────────
+    var CONN = 170, CONN2 = CONN * CONN;
+
+    function init() {
+      var mobile = W < 600;
+      var total = mobile ? 70 : 150;
+      var hubs  = mobile ? 5  : 10;
+      particles = [];
+      for (var i = 0; i < hubs;  i++) particles.push(new Particle(true));
+      for (var i = 0; i < total; i++) particles.push(new Particle(false));
+    }
+
+    // ── Frame loop ────────────────────────────────────
+    function frame(now) {
+      ctx.clearRect(0, 0, W, H);
+
+      // Dot grid
+      ctx.fillStyle = 'rgba(' + B + ',0.045)';
+      var gs = 38;
+      for (var gx = gs / 2; gx < W; gx += gs)
+        for (var gy = gs / 2; gy < H; gy += gs) {
+          ctx.beginPath(); ctx.arc(gx, gy, 0.9, 0, Math.PI * 2); ctx.fill();
+        }
+
+      // Mouse glow halo
+      if (mouse.x > -500) {
+        var mg = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 200);
+        mg.addColorStop(0,   'rgba(' + B + ',0.13)');
+        mg.addColorStop(0.5, 'rgba(' + B + ',0.04)');
+        mg.addColorStop(1,   'rgba(' + B + ',0)');
+        ctx.beginPath(); ctx.arc(mouse.x, mouse.y, 200, 0, Math.PI * 2);
+        ctx.fillStyle = mg; ctx.fill();
+      }
+
+      for (var i = 0; i < particles.length; i++) particles[i].update();
+
+      // Connections
+      for (var i = 0; i < particles.length; i++) {
+        for (var j = i + 1; j < particles.length; j++) {
+          var pi = particles[i], pj = particles[j];
+          var dx = pi.x - pj.x, dy = pi.y - pj.y;
+          var d2 = dx * dx + dy * dy;
+          if (d2 > CONN2) continue;
+          var t  = 1 - Math.sqrt(d2) / CONN;
+          var hi = pi.isHub || pj.isHub;
+          ctx.beginPath();
+          ctx.moveTo(pi.x, pi.y); ctx.lineTo(pj.x, pj.y);
+          ctx.strokeStyle = 'rgba(' + B + ',' + (t * t * (hi ? 0.78 : 0.4)) + ')';
+          ctx.lineWidth   = hi ? 1.1 : 0.6; ctx.stroke();
+        }
+      }
+
+      for (var i = 0; i < particles.length; i++) particles[i].draw();
+
+      // Packets
+      if (now - lastPacket > 480) {
+        lastPacket = now;
+        for (var tries = 0; tries < 30; tries++) {
+          var ai = Math.floor(Math.random() * particles.length);
+          var bi = Math.floor(Math.random() * particles.length);
+          if (ai === bi) continue;
+          var pa = particles[ai], pb = particles[bi];
+          var ddx = pa.x - pb.x, ddy = pa.y - pb.y;
+          if (ddx * ddx + ddy * ddy < CONN2) { packets.push(new Packet(pa, pb)); break; }
+        }
+      }
+      packets = packets.filter(function (p) { p.update(); if (p.alive) p.draw(); return p.alive; });
+
+      // Hub rings
+      if (now - lastRing > 1400) {
+        lastRing = now;
+        var hubs = particles.filter(function (p) { return p.isHub; });
+        if (hubs.length) { var h = hubs[Math.floor(Math.random() * hubs.length)]; rings.push(new Ring(h.x, h.y, false)); }
+      }
+      rings = rings.filter(function (r) { r.update(); if (r.alive) r.draw(); return r.alive; });
+
+      // Shooting stars
+      if (now - lastStar > 2800 + Math.random() * 2000) {
+        lastStar = now; stars.push(new Star());
+      }
+      stars = stars.filter(function (s) { s.update(); if (s.alive) s.draw(); return s.alive; });
+
+      requestAnimationFrame(frame);
+    }
+
+    // ── Events ────────────────────────────────────────
+    window.addEventListener('mousemove', function (e) {
       var rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
-    });
-    window.addEventListener('touchmove', function(e) {
-      var rect = canvas.getBoundingClientRect();
-      mouse.x = e.touches[0].clientX - rect.left;
-      mouse.y = e.touches[0].clientY - rect.top;
     }, { passive: true });
 
-    function animate(now) {
-      var dt = (now - lastTime) / 1000; lastTime = now;
-      var k = 8 * dt;
-      mouseDamp.x += (mouse.x - mouseDamp.x) * k;
-      mouseDamp.y += (mouse.y - mouseDamp.y) * k;
+    hero.addEventListener('mouseleave', function () { mouse.x = -9999; mouse.y = -9999; });
 
-      gl.clear(gl.COLOR_BUFFER_BIT);
+    // Click burst — scatter particles and emit rings
+    canvas.addEventListener('click', function (e) {
+      var rect = canvas.getBoundingClientRect();
+      var cx = e.clientX - rect.left, cy = e.clientY - rect.top;
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        var dx = p.x - cx, dy = p.y - cy;
+        var d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 300 && d > 0) {
+          var f = ((300 - d) / 300) * 5;
+          p.vx += (dx / d) * f; p.vy += (dy / d) * f;
+        }
+      }
+      for (var r = 0; r < 4; r++) rings.push(new Ring(cx, cy, true));
+    });
 
-      var dpr = Math.min(window.devicePixelRatio || 1, 2);
-      var t = (Date.now() - startTime) / 1000;
-      gl.uniform2f(uniforms.u_mouse, mouseDamp.x, mouseDamp.y);
-      gl.uniform2f(uniforms.u_resolution, canvas.width, canvas.height);
-      gl.uniform1f(uniforms.u_pixelRatio, dpr);
-      gl.uniform1f(uniforms.u_time, t);
-      gl.uniform1i(uniforms.u_shape, currentShape);
-      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    window.addEventListener('resize', function () { resize(); init(); }, { passive: true });
 
-      requestAnimationFrame(animate);
-    }
-
-    resize();
-    window.addEventListener('resize', resize);
-    requestAnimationFrame(animate);
+    resize(); init(); requestAnimationFrame(frame);
   })();
   </script>
 
@@ -1257,6 +1165,82 @@ void main() {
     window.addEventListener('scroll', () => {
       nav.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.06)' : 'none';
     }, { passive: true });
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+  // ─── CONTACT: DOTTED WAVE SURFACE ───
+  (function () {
+    var container = document.getElementById('contact-dotted');
+    if (!container) return;
+
+    var SEPARATION = 150;
+    var AMOUNTX    = 40;
+    var AMOUNTY    = 60;
+
+    var scene = new THREE.Scene();
+
+    var camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 1, 10000);
+    camera.position.set(0, 355, 1220);
+
+    var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setClearColor(0x000000, 0);
+    container.appendChild(renderer.domElement);
+
+    var positions = [];
+    for (var ix = 0; ix < AMOUNTX; ix++) {
+      for (var iy = 0; iy < AMOUNTY; iy++) {
+        positions.push(
+          ix * SEPARATION - (AMOUNTX * SEPARATION) / 2,
+          0,
+          iy * SEPARATION - (AMOUNTY * SEPARATION) / 2
+        );
+      }
+    }
+
+    var geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+
+    var material = new THREE.PointsMaterial({
+      size: 7,
+      color: 0xffffff,
+      transparent: true,
+      opacity: 0.55,
+      sizeAttenuation: true
+    });
+
+    var points = new THREE.Points(geometry, material);
+    scene.add(points);
+
+    var count = 0;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      var posAttr = geometry.attributes.position;
+      var arr = posAttr.array;
+      var i = 0;
+      for (var ix = 0; ix < AMOUNTX; ix++) {
+        for (var iy = 0; iy < AMOUNTY; iy++) {
+          arr[i * 3 + 1] = Math.sin((ix + count) * 0.3) * 50 + Math.sin((iy + count) * 0.5) * 50;
+          i++;
+        }
+      }
+      posAttr.needsUpdate = true;
+      renderer.render(scene, camera);
+      count += 0.08;
+    }
+
+    window.addEventListener('resize', function () {
+      var w = container.clientWidth, h = container.clientHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+    }, { passive: true });
+
+    animate();
+  })();
   </script>
 </body>
 </html>
