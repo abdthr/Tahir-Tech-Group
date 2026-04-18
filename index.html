@@ -60,10 +60,17 @@
     .nav-logo img { height: 32px; width: auto; }
 
     .nav-logo-text {
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
       color: var(--dark);
+      line-height: 1;
+    }
+    .nav-logo-text .brand-built {
+      color: var(--dark);
+    }
+    .nav-logo-text .brand-digital {
+      color: var(--blue);
     }
 
     .nav-links {
@@ -189,6 +196,9 @@
       width: 100%; height: 100%;
       pointer-events: none;
       z-index: 1;
+    }
+    @media (max-width: 900px) {
+      #geo-canvas { display: none; }
     }
 
     .hero-stats {
@@ -600,7 +610,17 @@
       margin-bottom: 48px;
     }
 
-    .footer-brand img { height: 28px; width: auto; margin-bottom: 16px; }
+    .footer-brand img { height: 28px; width: auto; margin-bottom: 8px; }
+    .footer-brand-name {
+      display: block;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .footer-brand-name .brand-built { color: var(--light); }
+    .footer-brand-name .brand-digital { color: var(--blue); }
 
     .footer-brand p {
       font-size: 0.875rem;
@@ -689,7 +709,7 @@
   <nav id="nav">
     <a href="/" class="nav-logo">
       <img src="/Brand_assets/Brand_Logo_White.jpg" alt="builtdigital">
-      <span class="nav-logo-text">builtdigital</span>
+      <span class="nav-logo-text"><span class="brand-built">built</span><span class="brand-digital">digital</span></span>
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
@@ -834,7 +854,8 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="/Brand_assets/Brand_Logo_White.jpg" alt="builtdigital">
-        <p>Modern IT solutions built with precision. We help businesses grow with websites, hosting, and reliable tech support.</p>
+        <span class="footer-brand-name"><span class="brand-built">built</span><span class="brand-digital">digital</span></span>
+        <p>Technology built with precision. We help businesses grow with websites, hosting, and reliable tech support.</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
