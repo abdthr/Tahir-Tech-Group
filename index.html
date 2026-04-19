@@ -679,6 +679,46 @@
 
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
+    /* ─── LANG SWITCHER ─── */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 1px;
+      background: var(--gray-5);
+      border: 1px solid var(--gray-10);
+      border-radius: 100px;
+      padding: 3px;
+    }
+
+    .lang-btn {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      color: var(--gray-60);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px 11px;
+      border-radius: 100px;
+      transition: background 0.18s cubic-bezier(0.25,0.1,0.25,1), color 0.18s cubic-bezier(0.25,0.1,0.25,1);
+      line-height: 1;
+    }
+
+    .lang-btn:hover:not(.active) { color: var(--dark); background: var(--gray-10); }
+    .lang-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+    .lang-btn.active {
+      background: var(--dark);
+      color: var(--light);
+    }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
       nav { padding: 0 24px; }
@@ -711,23 +751,30 @@
       <img src="/Brand_assets/Brand_Logo_White.jpg" alt="builtdigital">
       <span class="nav-logo-text"><span class="brand-built">built</span><span class="brand-digital">digital</span></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">About</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Get in Touch</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#services" data-i18n="nav-services">Services</a></li>
+        <li><a href="#contact" data-i18n="nav-about">About</a></li>
+      </ul>
+      <div class="lang-switcher" role="group" aria-label="Language">
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        <button class="lang-btn" data-lang="nl" aria-pressed="false">NL</button>
+      </div>
+      <a href="#contact" class="nav-cta" data-i18n="nav-cta">Get in Touch</a>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <canvas id="geo-canvas"></canvas>
     <div class="hero-content">
-      <p class="hero-label">Technology Group</p>
-      <h1 class="hero-heading">A technology group that turns complexity into clarity.</h1>
-      <p class="hero-sub">We help businesses grow with precision-built websites, reliable hosting, and expert tech support. From first idea to live in weeks.</p>
+      <p class="hero-label" data-i18n="hero-label">Technology Group</p>
+      <h1 class="hero-heading" data-i18n="hero-heading">A technology group that turns complexity into clarity.</h1>
+      <p class="hero-sub" data-i18n="hero-sub">We help businesses grow with precision-built websites, reliable hosting, and expert tech support. From first idea to live in weeks.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">
-          Start a project
+          <span data-i18n="hero-btn">Start a project</span>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -737,19 +784,19 @@
     <div class="hero-stats">
       <div class="hero-stat">
         <div class="stat-number">50+</div>
-        <div class="stat-label">Projects delivered</div>
+        <div class="stat-label" data-i18n="stat-1">Projects delivered</div>
       </div>
       <div class="hero-stat">
         <div class="stat-number">97.4%</div>
-        <div class="stat-label">Uptime guarantee</div>
+        <div class="stat-label" data-i18n="stat-2">Uptime guarantee</div>
       </div>
       <div class="hero-stat">
         <div class="stat-number">24/7</div>
-        <div class="stat-label">Support availability</div>
+        <div class="stat-label" data-i18n="stat-3">Support availability</div>
       </div>
       <div class="hero-stat">
         <div class="stat-number">4.6★</div>
-        <div class="stat-label">Average client rating</div>
+        <div class="stat-label" data-i18n="stat-4">Average client rating</div>
       </div>
     </div>
   </section>
@@ -777,14 +824,14 @@
   <!-- INTRO -->
   <section class="intro">
     <div class="intro-left reveal">
-      <p class="section-label">Who We Are</p>
-      <h2>We design and build digital products that combine craft with reliability.</h2>
+      <p class="section-label" data-i18n="intro-label">Who We Are</p>
+      <h2 data-i18n="intro-heading">We design and build digital products that combine craft with reliability.</h2>
     </div>
     <div class="intro-right reveal">
-      <p>At builtdigital, we believe technology should be a lever for growth, not a source of friction. <strong>From idea to launch in weeks, not months.</strong></p>
-      <p>We work closely with businesses of all sizes to deliver websites, cloud infrastructure, and ongoing IT support that simply works. Reliably, securely, and at scale.</p>
+      <p data-i18n-html="intro-p1">At builtdigital, we believe technology should be a lever for growth, not a source of friction. <strong>From idea to launch in weeks, not months.</strong></p>
+      <p data-i18n="intro-p2">We work closely with businesses of all sizes to deliver websites, cloud infrastructure, and ongoing IT support that simply works. Reliably, securely, and at scale.</p>
       <a href="#services" class="link-arrow">
-        Explore our services
+        <span data-i18n="intro-link">Explore our services</span>
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
@@ -802,8 +849,8 @@
           <circle cx="16" cy="11" r="1" fill="currentColor"/>
           <path d="M10 22l4-4 4 4 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <h3>Web Development</h3>
-        <p>We craft fast, accessible websites and web applications tailored to your brand. Every pixel is intentional, every interaction purposeful.</p>
+        <h3 data-i18n="svc-web-title">Web Development</h3>
+        <p data-i18n="svc-web-desc">We craft fast, accessible websites and web applications tailored to your brand. Every pixel is intentional, every interaction purposeful.</p>
       </div>
       <div class="service-card">
         <svg class="service-icon" viewBox="0 0 40 40" fill="none">
@@ -813,8 +860,8 @@
           <path d="M14 31h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           <circle cx="20" cy="18" r="2" fill="currentColor"/>
         </svg>
-        <h3>Cloud &amp; Hosting</h3>
-        <p>Reliable, managed cloud infrastructure with 97.4% uptime. We handle deployment, monitoring, and maintenance so you can focus on growth.</p>
+        <h3 data-i18n="svc-cloud-title">Cloud &amp; Hosting</h3>
+        <p data-i18n="svc-cloud-desc">Reliable, managed cloud infrastructure with 97.4% uptime. We handle deployment, monitoring, and maintenance so you can focus on growth.</p>
       </div>
       <div class="service-card">
         <svg class="service-icon" viewBox="0 0 40 40" fill="none">
@@ -823,8 +870,8 @@
           <circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="1.5"/>
           <circle cx="20" cy="20" r="1.5" fill="currentColor"/>
         </svg>
-        <h3>IT Strategy</h3>
-        <p>From digital roadmaps to security audits, we align your technology stack with your long-term business objectives. Clearly and pragmatically.</p>
+        <h3 data-i18n="svc-it-title">IT Strategy</h3>
+        <p data-i18n="svc-it-desc">From digital roadmaps to security audits, we align your technology stack with your long-term business objectives. Clearly and pragmatically.</p>
       </div>
     </div>
   </section>
@@ -834,16 +881,16 @@
   <section class="contact" id="contact">
     <div id="contact-dotted"></div>
     <div class="contact-inner">
-      <p class="section-label-light reveal">Get in Touch</p>
-      <h2 class="reveal">We're ready<br>to collaborate.</h2>
-      <p class="reveal">Tell us about your project. We'll get back to you within one business day.</p>
+      <p class="section-label-light reveal" data-i18n="contact-label">Get in Touch</p>
+      <h2 class="reveal" data-i18n-html="contact-heading">We're ready<br>to collaborate.</h2>
+      <p class="reveal" data-i18n="contact-sub">Tell us about your project. We'll get back to you within one business day.</p>
       <a href="mailto:abdtahir132@gmail.com" class="contact-email reveal">
         abdtahir132@gmail.com
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <br>
       <a href="mailto:abdtahir132@gmail.com" class="btn-primary reveal" style="display:inline-flex;margin-top:8px;">
-        Start a Project
+        <span data-i18n="contact-btn">Start a Project</span>
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
@@ -855,30 +902,30 @@
       <div class="footer-brand">
         <img src="/Brand_assets/Brand_Logo_White.jpg" alt="builtdigital">
         <span class="footer-brand-name"><span class="brand-built">built</span><span class="brand-digital">digital</span></span>
-        <p>Technology built with precision. We help businesses grow with websites, hosting, and reliable tech support.</p>
+        <p data-i18n="footer-brand-desc">Technology built with precision. We help businesses grow with websites, hosting, and reliable tech support.</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4 data-i18n="footer-svc-heading">Services</h4>
           <ul>
-            <li><a href="#services">Web Development</a></li>
-            <li><a href="#services">Cloud &amp; Hosting</a></li>
-            <li><a href="#services">IT Strategy</a></li>
-            <li><a href="#services">Managed Support</a></li>
+            <li><a href="#services" data-i18n="footer-svc-1">Web Development</a></li>
+            <li><a href="#services" data-i18n="footer-svc-2">Cloud &amp; Hosting</a></li>
+            <li><a href="#services" data-i18n="footer-svc-3">IT Strategy</a></li>
+            <li><a href="#services" data-i18n="footer-svc-4">Managed Support</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4 data-i18n="footer-co-heading">Company</h4>
           <ul>
-            <li><a href="#contact">About Us</a></li>
-            <li><a href="mailto:abdtahir132@gmail.com">Contact Us</a></li>
+            <li><a href="#contact" data-i18n="footer-co-1">About Us</a></li>
+            <li><a href="mailto:abdtahir132@gmail.com" data-i18n="footer-co-2">Contact Us</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 builtdigital. All rights reserved.</p>
-      <p>Professional. Modern. Reliable.</p>
+      <p data-i18n="footer-copy">&copy; 2026 builtdigital. All rights reserved.</p>
+      <p data-i18n="footer-tagline">Professional. Modern. Reliable.</p>
     </div>
   </footer>
 
@@ -1261,6 +1308,165 @@
     }, { passive: true });
 
     animate();
+  })();
+  </script>
+
+  <script>
+  // ─── LANGUAGE SWITCHER ───
+  (function () {
+    var T = {
+      en: {
+        'nav-services': 'Services',
+        'nav-about': 'About',
+        'nav-cta': 'Get in Touch',
+        'hero-label': 'Technology Group',
+        'hero-heading': 'A technology group that turns complexity into clarity.',
+        'hero-sub': 'We help businesses grow with precision-built websites, reliable hosting, and expert tech support. From first idea to live in weeks.',
+        'hero-btn': 'Start a project',
+        'stat-1': 'Projects delivered',
+        'stat-2': 'Uptime guarantee',
+        'stat-3': 'Support availability',
+        'stat-4': 'Average client rating',
+        'intro-label': 'Who We Are',
+        'intro-heading': 'We design and build digital products that combine craft with reliability.',
+        'intro-p1': 'At builtdigital, we believe technology should be a lever for growth, not a source of friction. <strong>From idea to launch in weeks, not months.</strong>',
+        'intro-p2': 'We work closely with businesses of all sizes to deliver websites, cloud infrastructure, and ongoing IT support that simply works. Reliably, securely, and at scale.',
+        'intro-link': 'Explore our services',
+        'svc-web-title': 'Web Development',
+        'svc-web-desc': 'We craft fast, accessible websites and web applications tailored to your brand. Every pixel is intentional, every interaction purposeful.',
+        'svc-cloud-title': 'Cloud & Hosting',
+        'svc-cloud-desc': 'Reliable, managed cloud infrastructure with 97.4% uptime. We handle deployment, monitoring, and maintenance so you can focus on growth.',
+        'svc-it-title': 'IT Strategy',
+        'svc-it-desc': 'From digital roadmaps to security audits, we align your technology stack with your long-term business objectives. Clearly and pragmatically.',
+        'contact-label': 'Get in Touch',
+        'contact-heading': "We're ready<br>to collaborate.",
+        'contact-sub': "Tell us about your project. We'll get back to you within one business day.",
+        'contact-btn': 'Start a Project',
+        'footer-brand-desc': 'Technology built with precision. We help businesses grow with websites, hosting, and reliable tech support.',
+        'footer-svc-heading': 'Services',
+        'footer-svc-1': 'Web Development',
+        'footer-svc-2': 'Cloud & Hosting',
+        'footer-svc-3': 'IT Strategy',
+        'footer-svc-4': 'Managed Support',
+        'footer-co-heading': 'Company',
+        'footer-co-1': 'About Us',
+        'footer-co-2': 'Contact Us',
+        'footer-copy': '\u00a9 2026 builtdigital. All rights reserved.',
+        'footer-tagline': 'Professional. Modern. Reliable.'
+      },
+      fr: {
+        'nav-services': 'Services',
+        'nav-about': '\u00c0 propos',
+        'nav-cta': 'Contactez-nous',
+        'hero-label': 'Groupe Technologique',
+        'hero-heading': 'Un groupe technologique qui transforme la complexit\u00e9 en clart\u00e9.',
+        'hero-sub': 'Nous aidons les entreprises \u00e0 cro\u00eetre gr\u00e2ce \u00e0 des sites web sur mesure, un h\u00e9bergement fiable et un support technique expert. De la premi\u00e8re id\u00e9e \u00e0 la mise en ligne en quelques semaines.',
+        'hero-btn': 'D\u00e9marrer un projet',
+        'stat-1': 'Projets livr\u00e9s',
+        'stat-2': 'Garantie de disponibilit\u00e9',
+        'stat-3': 'Disponibilit\u00e9 du support',
+        'stat-4': 'Note client moyenne',
+        'intro-label': 'Qui Sommes-Nous',
+        'intro-heading': 'Nous concevons et construisons des produits num\u00e9riques alliant savoir-faire et fiabilit\u00e9.',
+        'intro-p1': 'Chez builtdigital, nous croyons que la technologie doit \u00eatre un levier de croissance, non une source de friction. <strong>De l\u2019id\u00e9e au lancement en quelques semaines, pas des mois.</strong>',
+        'intro-p2': 'Nous travaillons \u00e9troitement avec des entreprises de toutes tailles pour livrer des sites web, des infrastructures cloud et un support IT continu qui fonctionne simplement. De mani\u00e8re fiable, s\u00e9curis\u00e9e et \u00e0 grande \u00e9chelle.',
+        'intro-link': 'D\u00e9couvrir nos services',
+        'svc-web-title': 'D\u00e9veloppement Web',
+        'svc-web-desc': 'Nous cr\u00e9ons des sites web et applications rapides et accessibles, adapt\u00e9s \u00e0 votre marque. Chaque pixel est intentionnel, chaque interaction significative.',
+        'svc-cloud-title': 'Cloud & H\u00e9bergement',
+        'svc-cloud-desc': 'Infrastructure cloud g\u00e9r\u00e9e et fiable avec 97,4\u00a0% de disponibilit\u00e9. Nous g\u00e9rons le d\u00e9ploiement, la surveillance et la maintenance pour que vous puissiez vous concentrer sur votre croissance.',
+        'svc-it-title': 'Strat\u00e9gie IT',
+        'svc-it-desc': 'Des feuilles de route num\u00e9riques aux audits de s\u00e9curit\u00e9, nous alignons votre stack technologique sur vos objectifs \u00e0 long terme. Clairement et pragmatiquement.',
+        'contact-label': 'Contactez-nous',
+        'contact-heading': 'Nous sommes pr\u00eats<br>\u00e0 collaborer.',
+        'contact-sub': 'Parlez-nous de votre projet. Nous vous r\u00e9pondrons dans un d\u00e9lai d\u2019un jour ouvrable.',
+        'contact-btn': 'D\u00e9marrer un projet',
+        'footer-brand-desc': 'Technologie construite avec pr\u00e9cision. Nous aidons les entreprises \u00e0 cro\u00eetre gr\u00e2ce \u00e0 des sites web, l\u2019h\u00e9bergement et un support technique fiable.',
+        'footer-svc-heading': 'Services',
+        'footer-svc-1': 'D\u00e9veloppement Web',
+        'footer-svc-2': 'Cloud & H\u00e9bergement',
+        'footer-svc-3': 'Strat\u00e9gie IT',
+        'footer-svc-4': 'Support G\u00e9r\u00e9',
+        'footer-co-heading': 'Entreprise',
+        'footer-co-1': '\u00c0 propos',
+        'footer-co-2': 'Contactez-nous',
+        'footer-copy': '\u00a9 2026 builtdigital. Tous droits r\u00e9serv\u00e9s.',
+        'footer-tagline': 'Professionnel. Moderne. Fiable.'
+      },
+      nl: {
+        'nav-services': 'Diensten',
+        'nav-about': 'Over ons',
+        'nav-cta': 'Neem contact op',
+        'hero-label': 'Technologiegroep',
+        'hero-heading': 'Een technologiegroep die complexiteit omzet in duidelijkheid.',
+        'hero-sub': 'Wij helpen bedrijven groeien met op maat gebouwde websites, betrouwbare hosting en deskundige technische ondersteuning. Van eerste idee tot live in weken.',
+        'hero-btn': 'Start een project',
+        'stat-1': 'Opgeleverde projecten',
+        'stat-2': 'Uptimegarantie',
+        'stat-3': 'Beschikbaarheid support',
+        'stat-4': 'Gemiddelde klantbeoordeling',
+        'intro-label': 'Wie Wij Zijn',
+        'intro-heading': 'Wij ontwerpen en bouwen digitale producten die vakmanschap en betrouwbaarheid combineren.',
+        'intro-p1': 'Bij builtdigital geloven we dat technologie een groeihefboom moet zijn, niet een bron van frustratie. <strong>Van idee tot lancering in weken, niet maanden.</strong>',
+        'intro-p2': 'Wij werken nauw samen met bedrijven van alle groottes om websites, cloudinfrastructuur en doorlopende IT-ondersteuning te leveren die gewoon werkt. Betrouwbaar, veilig en op schaal.',
+        'intro-link': 'Ontdek onze diensten',
+        'svc-web-title': 'Webontwikkeling',
+        'svc-web-desc': 'Wij maken snelle, toegankelijke websites en webapplicaties op maat van uw merk. Elk pixel is doelbewust, elke interactie zinvol.',
+        'svc-cloud-title': 'Cloud & Hosting',
+        'svc-cloud-desc': 'Betrouwbare, beheerde cloudinfrastructuur met 97,4% uptime. Wij regelen implementatie, monitoring en onderhoud zodat u zich kunt concentreren op groei.',
+        'svc-it-title': 'IT-Strategie',
+        'svc-it-desc': 'Van digitale routekaarten tot beveiligingsaudits, wij stemmen uw technologiestack af op uw langetermijndoelstellingen. Duidelijk en pragmatisch.',
+        'contact-label': 'Neem contact op',
+        'contact-heading': 'We zijn klaar<br>om samen te werken.',
+        'contact-sub': 'Vertel ons over uw project. We reageren binnen \u00e9\u00e9n werkdag.',
+        'contact-btn': 'Start een project',
+        'footer-brand-desc': 'Technologie gebouwd met precisie. Wij helpen bedrijven groeien met websites, hosting en betrouwbare technische ondersteuning.',
+        'footer-svc-heading': 'Diensten',
+        'footer-svc-1': 'Webontwikkeling',
+        'footer-svc-2': 'Cloud & Hosting',
+        'footer-svc-3': 'IT-Strategie',
+        'footer-svc-4': 'Beheerde ondersteuning',
+        'footer-co-heading': 'Bedrijf',
+        'footer-co-1': 'Over ons',
+        'footer-co-2': 'Contact',
+        'footer-copy': '\u00a9 2026 builtdigital. Alle rechten voorbehouden.',
+        'footer-tagline': 'Professioneel. Modern. Betrouwbaar.'
+      }
+    };
+
+    var currentLang = localStorage.getItem('bd-lang') || 'en';
+
+    function applyLang(lang) {
+      var dict = T[lang];
+      if (!dict) return;
+      currentLang = lang;
+      localStorage.setItem('bd-lang', lang);
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.textContent = dict[key];
+      });
+
+      document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n-html');
+        if (dict[key] !== undefined) el.innerHTML = dict[key];
+      });
+
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        var active = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-pressed', String(active));
+      });
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        applyLang(btn.getAttribute('data-lang'));
+      });
+    });
+
+    applyLang(currentLang);
   })();
   </script>
 </body>

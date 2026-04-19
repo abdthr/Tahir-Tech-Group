@@ -1,6 +1,6 @@
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-const puppeteer = require("C:/Users/abdta/Desktop/Le Passage/node_modules/puppeteer/lib/cjs/puppeteer/puppeteer.js");
+const puppeteer = require("C:/Users/abdta/Documents/Tahir Tech Group/Business/web_development/Projects/Le Passage/node_modules/puppeteer/lib/cjs/puppeteer/puppeteer.js");
 
 import { existsSync, mkdirSync, readdirSync } from "fs";
 import { join, dirname } from "path";
